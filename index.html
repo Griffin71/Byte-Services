@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byte's Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            text-align: center;
+            background-color: #0b0c0c;
+            padding: 20px;
+            width: 100%;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        main, section {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to Byte's Services</h1>
+        <p><strong>It's important to read our <a href="terms.html" style="color: #007bff;">Terms and Conditions</a> and <a href="privacy.html" style="color: #007bff;">Privacy Policy</a> to understand our services and how we handle your data.</strong></p>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>At Byte's Services, we specialize in:</p>
+            <ul>
+                <li>Password recovery for laptops</li>
+                <li>Activation lock removal for iOS 12 to 16</li>
+                <li>Gmail and Facebook account recovery</li>
+                <li>Bypassing security on iOS and Android devices</li>
+            </ul>
+        </section>
+    </main>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Byte's Services was founded in 2015 with the goal of providing reliable and affordable technical support to individuals and businesses. Our team of experts is dedicated to helping you resolve any technical issues you may encounter.</p>
+    </section>
+
+    <section id="delivery">
+        <h2>Delivery Information</h2>
+        <p>Please note that your device is only to be delivered to the address given to you. If you would like us to fetch it, there will be an additional cost depending on your location.</p>
+    </section>
+    
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How long does the password recovery process take? <button onclick="toggleAnswer(this)">+</button></h3>
+            <p style="display:none;">The password recovery process typically takes between 1 to 3 business days, depending on the complexity of the issue.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Is there a warranty on your services? <button onclick="toggleAnswer(this)">+</button></h3>
+            <p style="display:none;">Yes, we offer a 30-day warranty on all our services. If you encounter any issues within this period, please contact us for assistance.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What payment methods do you accept? <button onclick="toggleAnswer(this)">+</button></h3>
+            <p style="display:none;">We accept various payment methods including credit cards, PayPal, and bank transfers.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can you recover data from a damaged device? <button onclick="toggleAnswer(this)">+</button></h3>
+            <p style="display:none;">Yes, we offer data recovery services for damaged devices. Please contact us with the details of your issue for a more accurate assessment.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How long does the Bypass Activation Lock process take? <button onclick="toggleAnswer(this)">+</button></h3>
+            <p style="display:none;">The Bypass Activation Lock process typically takes between 1 to 3 business days, depending on the complexity of the device and schedule.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Are you open on holidays? <button onclick="toggleAnswer(this)">+</button></h3>
+            <p style="display:none;">No, we are not open on holidays because after all, we need to rest too. However, we can still take your device.</p>
+        </div>
+    </section>
+
+    <script>
+    function toggleAnswer(button) {
+        const answer = button.parentElement.nextElementSibling;
+        if (answer.style.display === "none") {
+            answer.style.display = "block";
+            button.textContent = "-";
+        } else {
+            answer.style.display = "none";
+            button.textContent = "+";
+        }
+    }
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Byte's. All rights reserved.</p>
+    </footer>
+</body>
+</html>

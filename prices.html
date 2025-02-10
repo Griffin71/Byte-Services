@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Jailbreak/Factory Reset Prices</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-bottom: 2px solid #000;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        header input {
+            margin-left: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .category {
+            margin-bottom: 20px;
+        }
+        .category h2 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
+        .device-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .device-list li {
+            margin: 5px 0;
+        }
+        #searchModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        #searchModalContent {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 400px;
+        }
+        .modal-close {
+            text-align: right;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .search-results {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html">Home</a> | <a href="about.html">About</a>
+        </div>
+        <input type="text" id="searchInput" placeholder="Search for a device..." oninput="searchDevices()" style="font-size: 16px;">
+    </header>
+
+    <div class="container">
+        <h1>Device Jailbreak/Factory Reset Prices</h1>
+
+        <div class="category">
+            <h2>iPhones</h2>
+            <ul class="device-list">
+                <li>iPhone 3 - iPhone 5: R200</li>
+                <li>iPhone 6 - iPhone X: R400</li>
+                <li>iPhone XR - iPhone 11: R500</li>
+                <li>iPhone 12 - iPhone 15: R600</li>
+                <li>iPhone 16: R1000</li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h2>Huawei Devices</h2>
+            <ul class="device-list">
+                <li>Huawei P8 - P10: R200</li>
+                <li>Huawei P20 - P30: R400</li>
+                <li>Huawei P40 - P50: R500</li>
+                <li>Huawei Mate 30 - Mate 40: R600</li>
+                <li>Huawei Mate 50: R1000</li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h2>Samsung Devices</h2>
+            <ul class="device-list"></ul>
+                <li>Samsung Galaxy S3 - S5: R200</li>
+                <li>Samsung Galaxy S6 - S10: R400</li>
+                <li>Samsung Galaxy S20 - S21: R500</li>
+                <li>Samsung Galaxy S22 - S23: R600</li>
+                <li>Samsung Galaxy S24: R1000</li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h2>Mobicel Devices</h2>
+            <ul class="device-list">
+                <li>Mobicel R1 - R3: R200</li>
+                <li>Mobicel R4 - R6: R400</li>
+                <li>Mobicel R7 - R9: R500</li>
+                <li>Mobicel R10 - R12: R600</li>
+                <li>Mobicel R13: R1000</li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h2>MacBooks</h2>
+            <ul class="device-list"></ul>
+                <li>MacBook Air 2010 - 2015: R600</li>
+                <li>MacBook Air 2016 - 2019: R800</li>
+                <li>MacBook Air 2020 - 2022: R1000</li>
+                <li>MacBook Pro 2010 - 2015: R600</li>
+                <li>MacBook Pro 2016 - 2019: R800</li>
+                <li>MacBook Pro 2020 - 2022: R1000</li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h2>Dell/Acer Laptops</h2>
+            <ul class="device-list">
+                <li>Dell Inspiron 2010 - 2015: R600</li>
+                <li>Dell Inspiron 2016 - 2019: R800</li>
+                <li>Dell Inspiron 2020 - 2022: R1000</li>
+                <li>Acer Aspire 2010 - 2015: R600</li>
+                <li>Acer Aspire 2016 - 2019: R800</li>
+                <li>Acer Aspire 2020 - 2022: R1000</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="searchModal">
+        <div id="searchModalContent">
+            <div class="modal-close" onclick="closeModal()">X</div>
+            <h2>No such device, sorry.</h2>
+            <p>Perhaps contact me about that device and I'll get back to you.</p>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </div>
+
+    <script>
+        function searchDevices() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const categories = document.querySelectorAll('.category');
+            let found = false;
+
+            // Hide modal initially
+            document.getElementById('searchModal').style.display = 'none';
+
+            categories.forEach(category => {
+                const devices = category.querySelectorAll('.device-list li');
+                let categoryFound = false;
+
+                devices.forEach(device => {
+                    if (device.textContent.toLowerCase().includes(input)) {
+                        device.style.display = 'list-item';
+                        categoryFound = true;
+                    } else {
+                        device.style.display = 'none';
+                    }
+                });
+
+                if (categoryFound) {
+                    category.style.display = 'block';
+                } else {
+                    category.style.display = 'none';
+                }
+
+                if (input !== '' && categoryFound) {
+                    found = true;
+                }
+            });
+
+            // If no device is found, show the modal
+            if (!found && input !== '') {
+                document.getElementById('searchModal').style.display = 'flex';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('searchModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

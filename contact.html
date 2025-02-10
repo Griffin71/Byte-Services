@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Contact Us</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0e0e0e;
+        }
+        header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+        footer {
+            margin-top: auto;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Contact Us</h1>
+    <form action="mailto:kabelosamkelo19@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="password_recovery_social">Password Recovery (Social/s)</option>
+            <option value="bypass_lock_activation">Bypass Lock Activation</option>
+            <option value="website">Website</option>
+            <option value="password_recovery_laptop">Password Recovery (Laptop/s)</option>
+            <option value="protect_hardware">Protect My Hardware</option>
+        </select>
+        
+        <div id="website-details" style="display: none;">
+            <label for="message">Describe the website that you need:</label>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        </div>
+
+        <script>
+            document.getElementById('subject').addEventListener('change', function() {
+            var websiteDetails = document.getElementById('website-details');
+            if (this.value === 'website') {
+                websiteDetails.style.display = 'block';
+            } else {
+                websiteDetails.style.display = 'none';
+            }
+            });
+        </script>
+        <input type="submit" value="Send">
+    </form>
+    <h2>Other Ways to Contact Us</h2>
+    <!-- Add Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<p><i class="fa fa-envelope"></i> 
+    <a href="mailto:kabelosamkelo19@gmail.com">kabelosamkelo19@gmail.com</a>
+</p>
+
+<p><i class="fa-brands fa-whatsapp"></i>  
+    <a href="https://wa.me/2760552713" target="_blank">0760552713</a>
+</p>
+
+<p><i class="fa-brands fa-instagram"></i> 
+    <a href="https://www.instagram.com/okaygriffy" target="_blank">@okaygriffy</a>
+</p>
+    <footer>
+        <p>&copy; 2025 Byte. All rights reserved.</p>
+    </footer>
+</body>
+</html>

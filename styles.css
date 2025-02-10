@@ -1,0 +1,799 @@
+/* Dark Hacker-Style Theme */
+
+body {
+    background-color: #000000; /* Black background */
+    color: #00FF00; /* Green text */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for terminal feel */
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #00FF00; /* Green links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #111111; /* Slightly lighter black for header and footer */
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: #111111; /* Dark button background */
+    color: #00FF00; /* Green text */
+    border: 1px solid #00FF00; /* Green border */
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00FF00; /* Green background on hover */
+    color: #000000; /* Black text on hover */
+}
+
+input, textarea {
+    background-color: #111111; /* Dark input background */
+    color: #00FF00; /* Green text */
+    border: 1px solid #00FF00; /* Green border */
+    padding: 5px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #00FF00; /* Green placeholder text */
+}
+
+code {
+    background-color: #111111; /* Dark background for code blocks */
+    color: #00FF00; /* Green text */
+    padding: 5px;
+    display: block;
+    margin: 10px 0;
+}
+
+pre {
+    background-color: #111111; /* Dark background for preformatted text */
+    color: #00FF00; /* Green text */
+    padding: 10px;
+    overflow: auto;
+}
+
+footer {
+    background-color: #000000; /* Slightly lighter black for header and footer */
+    padding: 10px;
+    text-align: flex;
+}
+
+/* Media Frames xD*/
+
+/* Media Queries for iPhone 13 to 16 */
+@media only screen and (max-width: 430px) {
+    body {
+        font-size: 14px;
+    }
+    header, footer {
+        padding: 15px;
+    }
+    main, section {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+/* Media Queries for iPhone 12 to X */
+@media only screen and (max-width: 390px) {
+    body {
+        font-size: 13px;
+    }
+    header, footer {
+        padding: 10px;
+    }
+    main, section {
+        width: 95%;
+        margin: 10px 0;
+    }
+}
+
+/* Media Queries for iPhone 8 to 3 */
+@media only screen and (max-width: 375px) {
+    body {
+        font-size: 12px;
+    }
+    header, footer {
+        padding: 8px;
+    }
+    main, section {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+/* Media Queries for Desktops */
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    main, section {
+        width: 70%;
+        margin: 30px 0;
+    }
+}
+
+/* Media Queries for TVs */
+@media only screen and (min-width: 1920px) {
+    body {
+        font-size: 22px;
+    }
+    main, section {
+        width: 60%;
+        margin: 40px 0;
+    }
+}
+
+/* Media Queries for Smaller Phones */
+@media only screen and (max-width: 320px) {
+    body {
+        font-size: 10px;
+    }
+    header, footer {
+        padding: 5px;
+    }
+    main, section {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Media Queries for Huge Phones */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 16px;
+    }
+    main, section {
+        width: 80%;
+        margin: 20px 0;
+    }
+}
+/* Media Queries for Contact Us Page */
+
+/* Media Queries for iPhone 13 to 16 */
+@media only screen and (max-width: 430px) {
+    form {
+        width: 66%;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Media Queries for iPhone 12 to X */
+@media only screen and (max-width: 390px) {
+    form {
+        width: 55%;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 12px;
+    }
+}
+
+/* Media Queries for iPhone 8 to 3 */
+@media only screen and (max-width: 295px) {
+    form {
+        width: 50%;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 12px;
+    }
+}
+
+/* Media Queries for Desktops */
+@media only screen and (min-width: 1024px) {
+    form {
+        width: 60%;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 10px 0;
+    }
+    body {
+        font-size: 24px;
+    }
+    h1 {
+        font-size: 34px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+
+/* Media Queries for TVs */
+@media only screen and (min-width: 1920px) {
+    form {
+        width: 50%;
+    }
+}
+
+/* Media Queries for Smaller Phones */
+@media only screen and (max-width: 320px) {
+    form {
+        width: 100%;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 11px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 10px;
+    }
+}
+
+/* Media Queries for Huge Phones */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    form {
+        width: 70%;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 8px;
+    }
+}
+/* Media Queries for Device Prices Page */
+
+/* Media Queries for iPhone 13 to 16 */
+@media only screen and (max-width: 430px) {
+    .container {
+        width: 95%;
+    }
+    .category h2 {
+        font-size: 18px;
+    }
+    .device-list li {
+        font-size: 14px;
+    }
+}
+
+/* Media Queries for iPhone 12 to X */
+@media only screen and (max-width: 390px) {
+    .container {
+        width: 100%;
+    }
+    .category h2 {
+        font-size: 16px;
+    }
+    .device-list li {
+        font-size: 13px;
+    }
+}
+
+/* Media Queries for iPhone 8 to 3 */
+@media only screen and (max-width: 375px) {
+    .container {
+        width: 100%;
+    }
+    .category h2 {
+        font-size: 15px;
+    }
+    .device-list li {
+        font-size: 12px;
+    }
+}
+
+/* Media Queries for Desktops */
+@media only screen and (min-width: 1024px) {
+    .container {
+        width: 70%;
+    }
+    .category h2 {
+        font-size: 22px;
+    }
+    .device-list li {
+        font-size: 18px;
+    }
+}
+
+/* Media Queries for TVs */
+@media only screen and (min-width: 1920px) {
+    .container {
+        width: 60%;
+    }
+    .category h2 {
+        font-size: 26px;
+    }
+    .device-list li {
+        font-size: 22px;
+    }
+}
+
+/* Media Queries for Smaller Phones */
+@media only screen and (max-width: 320px) {
+    .container {
+        width: 100%;
+    }
+    .category h2 {
+        font-size: 14px;
+    }
+    .device-list li {
+        font-size: 10px;
+    }
+}
+
+/* Media Queries for Huge Phones */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 80%;
+    }
+    .category h2 {
+        font-size: 20px;
+    }
+    .device-list li {
+        font-size: 16px;
+    }
+}
+/* Media Queries for Privacy Policy Page */
+
+/* Media Queries for iPhone 13 to 16 */
+@media only screen and (max-width: 430px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Media Queries for iPhone 12 to X */
+@media only screen and (max-width: 390px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 13px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 13px;
+    }
+}
+
+/* Media Queries for iPhone 8 to 3 */
+@media only screen and (max-width: 375px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 12px;
+    }
+}
+
+/* Media Queries for Desktops */
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+/* Media Queries for TVs */
+@media only screen and (min-width: 1920px) {
+    body {
+        font-size: 22px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 22px;
+    }
+}
+
+/* Media Queries for Smaller Phones */
+@media only screen and (max-width: 320px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 10px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 10px;
+    }
+}
+
+/* Media Queries for Huge Phones */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+/* Media Queries for Services Page */
+
+/* Media Queries for iPhone 13 to 16 */
+@media only screen and (max-width: 430px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p, ul li {
+        font-size: 14px;
+    }
+}
+
+/* Media Queries for iPhone 12 to X */
+@media only screen and (max-width: 390px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 13px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    p, ul li {
+        font-size: 13px;
+    }
+}
+
+/* Media Queries for iPhone 8 to 3 */
+@media only screen and (max-width: 375px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    p, ul li {
+        font-size: 12px;
+    }
+}
+
+/* Media Queries for Desktops */
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    p, ul li {
+        font-size: 18px;
+    }
+}
+
+/* Media Queries for TVs */
+@media only screen and (min-width: 1920px) {
+    body {
+        font-size: 22px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    p, ul li {
+        font-size: 22px;
+    }
+}
+
+/* Media Queries for Smaller Phones */
+@media only screen and (max-width: 320px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 10px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 14px;
+    }
+    p, ul li {
+        font-size: 10px;
+    }
+}
+
+/* Media Queries for Huge Phones */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p, ul li {
+        font-size: 16px;
+    }
+}
+/* Media Queries for Terms and Conditions Page */
+
+/* Media Queries for iPhone 13 to 16 */
+@media only screen and (max-width: 430px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Media Queries for iPhone 12 to X */
+@media only screen and (max-width: 390px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 13px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 13px;
+    }
+}
+
+/* Media Queries for iPhone 8 to 3 */
+@media only screen and (max-width: 375px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    p {
+        font-size: 12px;
+    }
+}
+
+/* Media Queries for Desktops */
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+/* Media Queries for TVs */
+@media only screen and (min-width: 1920px) {
+    body {
+        font-size: 22px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 22px;
+    }
+}
+
+/* Media Queries for Smaller Phones */
+@media only screen and (max-width: 320px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin: 5px 0;
+    }
+    body {
+        font-size: 10px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 14px;
+    }
+    p {
+        font-size: 10px;
+    }
+}
+
+/* Media Queries for Huge Phones */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
