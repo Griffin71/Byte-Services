@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="recover.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Account Recovery</title>
+
+    <header>
+        <h1>Account Recovery</h1>
+        <nav>
+            <ul>
+                <a href="index.html" style="color: green;"><i class="fa fa-home"></i></a>
+               
+            </ul>
+        </nav>
+    </header>
+    <style>
+        .unavailable {
+            color: grey;
+            pointer-events: none;
+        }
+    </style>
+    <script>
+        let clickCount = 0;
+
+        function handleUnavailableClick() {
+            clickCount++;
+            if (clickCount >= 5) {
+                alert('This service is unavailable for now.');
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <form action="mailto:kabelosamkelo19@gmail.com" method="post" enctype="text/plain">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="account-type">Select Account Type:</label>
+        <select id="account-type" name="account-type" required>
+            <option value="gmail">Gmail</option>
+            <option value="facebook">Facebook</option>
+        </select><br><br>
+
+        <button type="submit">Recover Account</button>
+    </form>
+
+    <h2>Other Social Media (Coming Soon)</h2>
+    <ul>
+        <li class="unavailable" onclick="handleUnavailableClick()">Twitter</li>
+        <li class="unavailable" onclick="handleUnavailableClick()">Instagram</li>
+        <li class="unavailable" onclick="handleUnavailableClick()">LinkedIn</li>
+    </ul>
+    <script src="functions.js"></script>
+</body>
+</html>
+<footer>
+    <p>&copy; 2025 Byte. All rights reserved.</p>
+    <nav>
+        <ul>
+            <li><a href="terms.html">Terms and Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+    </nav>
+</footer>
