@@ -797,3 +797,95 @@ footer {
         font-size: 16px;
     }
 }
+/* Media Queries for Disclaimer Section */
+
+/* Media Queries for iPhone 13 to 16 */
+@media only screen and (max-width: 430px) {
+    #disclaimer {
+        padding: 10px;
+    }
+    #disclaimer h2 {
+        font-size: 18px;
+    }
+    #disclaimer p {
+        font-size: 14px;
+    }
+}
+
+/* Media Queries for iPhone 12 to X */
+@media only screen and (max-width: 390px) {
+    #disclaimer {
+        padding: 8px;
+    }
+    #disclaimer h2 {
+        font-size: 16px;
+    }
+    #disclaimer p {
+        font-size: 13px;
+    }
+}
+
+/* Media Queries for iPhone 8 to 3 */
+@media only screen and (max-width: 375px) {
+    #disclaimer {
+        padding: 6px;
+    }
+    #disclaimer h2 {
+        font-size: 15px;
+    }
+    #disclaimer p {
+        font-size: 12px;
+    }
+}
+
+/* Media Queries for Desktops */
+@media only screen and (min-width: 1024px) {
+    #disclaimer {
+        padding: 20px;
+    }
+    #disclaimer h2 {
+        font-size: 22px;
+    }
+    #disclaimer p {
+        font-size: 18px;
+    }
+}
+
+/* Media Queries for TVs */
+@media only screen and (min-width: 1920px) {
+    #disclaimer {
+        padding: 30px;
+    }
+    #disclaimer h2 {
+        font-size: 26px;
+    }
+    #disclaimer p {
+        font-size: 22px;
+    }
+}
+
+/* Media Queries for Smaller Phones */
+@media only screen and (max-width: 320px) {
+    #disclaimer {
+        padding: 4px;
+    }
+    #disclaimer h2 {
+        font-size: 14px;
+    }
+    #disclaimer p {
+        font-size: 10px;
+    }
+}
+
+/* Media Queries for Huge Phones */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    #disclaimer {
+        padding: 15px;
+    }
+    #disclaimer h2 {
+        font-size: 20px;
+    }
+    #disclaimer p {
+        font-size: 16px;
+    }
+}
